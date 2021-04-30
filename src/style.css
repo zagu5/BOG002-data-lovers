@@ -1,0 +1,176 @@
+body{
+    background-image: url(../image/verde.png);
+    background-size: cover;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+}
+/* header styles*/
+header {
+	width:100%; 
+	overflow:hidden; 
+	margin-bottom:20px;
+}
+.contenedor {
+	width:90%; 
+	max-width:1000px; 
+	margin:auto; 
+	overflow:hidden;  
+}
+.logo{
+    background: url(../image/logo.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 800px;
+    height: 200px;
+    left: 10px;
+    top: 6px;  
+}
+header nav {
+	/*display: flex;*/
+	float:right;
+	line-height:200px;
+}
+header nav a  {
+	display:inline-block;
+	color: #01B4C6;
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+    font-family: Shadows Into Light;
+	font-size:48px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+header nav p  {
+	display:inline-block;
+	color: #01B4C6;
+	padding:10px 20px;
+	line-height:normal;
+    font-family: Shadows Into Light;
+	font-size:48px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+header nav a:focus {
+	background: #97ce4c;
+	border-radius:50px;
+}
+header nav p:hover {
+	background: #97ce4c;
+	border-radius:25px;
+}
+
+label {
+	color: whitesmoke;
+}
+.resultado{
+	color: whitesmoke;
+} 
+/*section styles*/
+
+section article {
+	width: 300px;
+	border: 42px ridge black;
+	border-image-width: 1;
+	border-image-source: url(https://i.imgur.com/YC5PUl6.png);
+	border-image-slice: 23%;
+	border-image-repeat: round;
+
+	/*background: url(../image/verde.png);
+	width: 28%;*/
+    float: left;
+	margin: 30px;
+	/*border: 5px ridge cornsilk;
+	border-radius: 20px;*/
+	text-align: center;
+	
+}
+id {
+	font-family: Shadows Into Light;
+	font-size: 2.5rem;
+	
+	margin-bottom: 10px;
+	color: cornsilk;
+	text-align: center;
+}
+name {
+	font-family: Shadows Into Light;
+	font-size: 2.0rem;
+	margin-bottom: 10px;
+	color: cornsilk;
+  }
+  section p {
+	margin: 5px 0;
+	font-family: Shadows Into Light;
+	color: cornsilk;
+	font-size: 1.5rem;
+  }
+ section img {
+	width: 40%;
+	margin: 5px 0;
+	border-radius: 20px;
+
+  }
+
+/* footer styles*/
+footer {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: #01B4C6;
+    text-align: center;
+	
+  }
+  
+  small {
+	/*opacity: .5;*/
+	font-weight: 300;
+  }
+
+ /* @media screen and (max-width: 950px) {
+	header .logo,
+	header nav {
+		width:100%;
+		/*Centramos el menu y el logotipo*/
+		/*text-align:center; 
+		line-height:100px;
+	}
+  }*/
+  
+
+  @media screen and (max-width 3000px){
+    header .logo,
+	header nav {
+        color: silver;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width 1200px){
+    header .logo,
+	header nav {
+        color: rgb(38, 143, 56);
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width 700px){
+    header .logo,
+	header nav {
+        color: rgb(116, 64, 90);
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width 500px){
+    header .logo,
+	header nav {
+        color: rgb(224, 107, 28);
+        font-size: 1rem;
+    }
+}
