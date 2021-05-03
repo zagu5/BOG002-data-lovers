@@ -8,6 +8,7 @@ export const anotherExample = () => {
   return 'OMG';
 };*/
 
+/*----- Function sort by A-Z and Z-A -----*/ 
 export function sortData(data, sortOrder){
 
   const result = data.sort(function (e1,e2){
@@ -28,6 +29,7 @@ export function sortData(data, sortOrder){
   }  
 };
 
+/*----- Functions filter by: status, gender and species A-Z  -----*/
 export  function filterStatus(data, userCondition){
 
   const result = data.filter(d => d.status === userCondition);

@@ -11,7 +11,7 @@ header {
 	overflow:hidden; 
 	margin-bottom:20px;
 }
-.contenedor {
+.container{
 	width:90%; 
 	max-width:1000px; 
 	margin:auto; 
@@ -27,7 +27,7 @@ header {
     top: 6px;  
 }
 header nav {
-	/*display: flex;*/
+	display: flex;
 	float:right;
 	line-height:200px;
 }
@@ -68,9 +68,12 @@ header nav p:hover {
 label {
 	color: whitesmoke;
 }
-.resultado{
+.resultShowSort{
 	color: whitesmoke;
 } 
+.resultShowFilter{
+	color: whitesmoke;
+}
 /*section styles*/
 
 section article {

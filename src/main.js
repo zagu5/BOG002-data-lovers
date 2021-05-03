@@ -1,58 +1,76 @@
 import { sortData, filterStatus, filterGender, filterSpecies } from './data.js';
 
 import data from './data/rickandmorty/rickandmorty.js';
- const arr = data.results;
- 
+
   const section = document.querySelector('section');
+  const arrData = data.results;   
   
-  for (let i = 0; i<arr.length; i++ ){
-   //console.log(arr[i]); 
-    const dataPersonaje = arr[i];
-   // console.log (dataPersonaje.name)
-    //const pintarNombre = dataPersonaje.name
-    const personaje = document.createElement('article');
-    const nombre = document.createElement ('name');
-    const estado = document.createElement('p');
-    const especie = document.createElement('p');
-    const genero = document.createElement('p');
-    const imagen= document.createElement('img')
+  function showCharacters(){
+    for (let i = 0; i<arrData.length; i++ ){
+    //console.log(arr[i]); 
+    const dataCharacter = arrData[i];
+    // console.log (dataCharacter.name)
+    //const showName = dataCharacter.name
+    const character = document.createElement('article');
+    const nameCharacter = document.createElement ('name');
+    const statusCharacter = document.createElement('p');
+    const speciesCharacter = document.createElement('p');
+    const genderCharacter = document.createElement('p');
+    const imageCharacter= document.createElement('img')
 
-    nombre.textContent = arr[i].name;
-    estado.textContent = 'Status: ' + arr[i].status;
-    especie.textContent = 'Species: ' + arr[i].species;
-    genero.textContent = 'Gender: ' + arr[i].gender;
-    imagen.src = arr[i].image;
+    nameCharacter.textContent = arrData[i].name;
+    statusCharacter.textContent = 'Status: ' + arrData[i].status;
+    speciesCharacter.textContent = 'Species: ' + arrData[i].species;
+    genderCharacter.textContent = 'Gender: ' + arrData[i].gender;
+    imageCharacter.src = arrData[i].image;
       
-    personaje.appendChild(nombre);
-    personaje.appendChild(estado);
-    personaje.appendChild(especie);
-    personaje.appendChild(genero);
-    personaje.appendChild(imagen);
+    character.appendChild(nameCharacter);
+    character.appendChild(statusCharacter);
+    character.appendChild(speciesCharacter);
+    character.appendChild(genderCharacter);
+    character.appendChild(imageCharacter);
    
-     section.appendChild(personaje);
+     section.appendChild(character);
   }
+}
+showCharacters();
 
+  const showSort = document.querySelector('.showSort');
+  showSort.addEventListener('change', (event) => {
+      const resultShowSort= document.querySelector('.resultShowSort');
+      resultShowSort.textContent = `You order by ${event.target.value}`;
+      //console.log(event.target.value)
 
-
-  const mostrarOrdenar = document.querySelector('.mostrarOrdenar');
-
-  mostrarOrdenar.addEventListener('change', (event) => {
-      const resultado= document.querySelector('.resultado');
-      resultado.textContent = `You order by ${event.target.value}`;
-  
-    console.log(event.target.value)
+      const result1 = sortData (arrData, event.target.value)
+      showCharacters(result1);
+      console.log(result1);
   });
 /*
-  const mostrarfiltrar = document.querySelector('.mostrarfiltrar');
+  mostrarOrdenar.addEventListener("change", function(e){
+    console.log(e)
+  });*/
+  
+  /*
+  mostrarOrdenar.addEventListener("change", showSort);
+    function showSort(event){
+      console.log(event.target.value)
+    }*/
 
-  mostrarfiltrar.addEventListener('change', (event) => {
-      const resultado= document.querySelector('.resultadoFiltrar');
-      resultado.textContent = `You order by ${event.target.value}`;
+
+
+  const showFilter = document.querySelector('.showFilter');
+
+  showFilter.addEventListener('change', (event) => {
+      const resultShowFilter= document.querySelector('.resultShowFilter');
+      resultShowFilter.textContent = `You filter by ${event.target.value}`;
   
     console.log(event.target.value)
-  }); */
+      const result1 = filterStatus (arrData, event.target.value)
+        showCharacters(result1);
+    //console.log(result1);
+  }); 
   
-console.log("Ordenar a-z", sortData(arr, "a-z"))
+ // console.log("Ordenar a-z", sortData(arr, "a-z"))
  //console.log("Ordenar z-a", sortData(arr, "z-a"))
   
 //console.log("filtrar por estado", filterStatus(arr, "Alive"));
