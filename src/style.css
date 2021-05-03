@@ -18,7 +18,8 @@ header {
 	overflow:hidden;  
 }
 .logo{
-    background: url(../image/logo.png);
+	display: flex;
+    /*background: url(../image/logo.png);*/
     background-repeat: no-repeat;
     position: absolute;
     width: 800px;

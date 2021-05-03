@@ -16,22 +16,49 @@
         </div>	
 			  <nav>
           <label> Choose an 
-				    <select class="showSort"  name= "showSort">             
+				    <select class="showSort"  name= "showSort"> 
+              <option value="sortBy">Sort By</option>            
               <option value="A-Z">A-Z</option>
               <option value="Z-A">Z-A</option>
             </select>
           </label>
-          <div class="resultShowSort"></div>
-          
-          <label> Filter by
-          <select class="showFilter" name="showFilter">
-            <option value="status">Status</option>
-            <option value="especie">Specie</option>
-            <option value="genero">Genre</option>
+          <div class="resultShow"></div>
+          <!--
+          <label> Filter by Species
+          <select class="showFilterBySpecies" name="showFilterBySpecies">
+            <option value="filterSpecies">By Species</option>
+            <option value="Human">Human</option>
+            <option value="Alien">Alien</option>
+            <option value="Humanoid">Humanoid</option>
+            <option value="Robot">Robot</option>
+            <option value="Mytholog">Mytholog</option>
+            <option value="Animal">Animal</option>
+            <option value="Poopybutthole">Poopybutthole</option>
+            <option value="Cronenberg">Cronenberg</option>
+            <option value="Vampire">Vampire</option>
           </select>
-          </label>
-          <div class="resultShowFilter"></div>
-				 <!--
+          </label>-->
+
+          <label> Filter by Gender
+            <select class="showFilterByGender" name="showFilterByGender">
+              <option value="filterGenders">By Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Genderless">Genderless</option>
+              <option value="unknown">unknown</option>
+            </select>
+            </label>
+
+            <label> Filter by Status
+              <select class="showFilterByStatus" name="showFilterByStatus">
+                <option value="filterStatus">By Status</option>
+                <option value="Alive">Alive</option>
+                <option value="Dead">Dead</option>
+                <option value="unknown">unknown</option>
+              </select>
+              </label>
+         <!-- <div class="resultShowFilter"></div>
+				 
         <p><input type="search" name="campobusqueda" autofocus>
         <input type="submit" value="Search">
         </p>-->

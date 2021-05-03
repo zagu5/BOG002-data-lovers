@@ -22,33 +22,33 @@ export function sortData(data, sortOrder){
   });//console.log(data)
  
 
-  if (sortOrder === "z-a"){
+  if (sortOrder === "Z-A"){
     return result.reverse();
     } else {
     return result;
   }  
-};
+}
 
-/*----- Functions filter by: status, gender and species A-Z  -----*/
+/*----- Functions filter by: status, gender and species -----*/
 export  function filterStatus(data, userCondition){
 
   const result = data.filter(d => d.status === userCondition);
   return result;
     
-};
+}
 
 export function filterGender(data, userCondition){
 
   const result = data.filter(d => d.gender === userCondition);
   return result;
     
-};
+}
 
 export function filterSpecies(data, userCondition){
 
   const result = data.filter(d => d.species === userCondition);
   return result;
     
-};
+}
 
 
