@@ -1,23 +1,28 @@
-import { example, anotherExample } from '../src/data.js';
+import { sortData} from '../src/data.js';
 
 
-describe('example', () => {
+describe('sortData es una funcion', () => {
   it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
 
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+    expect(typeof sortData).toBe('function');
 });
 
+  it('verificar que ordene de la a-z', () => {
+    const dataPrueba = [{name:'Rick'},{name:'Morty'},{name:'Dan'}];
+    const result = sortData(dataPrueba, 'A-Z');
+    const dataOrdenada = [{name:'Dan'},{name:'Morty'},{name:'Rick'}]; 
+    expect(result).toEqual(dataOrdenada);
+  })
+});
 
-describe('anotherExample', () => {
+/*
+describe('filterStatus', () => {
   it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterStatus).toBe('function');
   });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  it('returns `result`', () => {
+    expect(filterStatus()).toBe('filterStatus');
   });
 });
+*/

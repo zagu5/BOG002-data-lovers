@@ -46,7 +46,7 @@ showCharacters(arrData);
       //  console.log(event.target.value)
        const result = sortData(arrData, event.target.value);
        showCharacters(result);
-       console.log(result);
+       //console.log(result);
   });
 
 
@@ -77,6 +77,12 @@ showFilterByStatus.addEventListener('change', (event) => {
  showCharacters(resultFilterStatus);
   // console.log("filter by", resultFilterStatus);
 });
+
+/*
+function computeStats(data){
+  
+};*/
+
 
 
 /*
