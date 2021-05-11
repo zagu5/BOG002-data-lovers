@@ -4,7 +4,6 @@ import data from './data/rickandmorty/rickandmorty.js';
 
   const section = document.querySelector('section');
   const arrData = data.results;   
-  //let valores = Object.values(arrData);
   
   function showCharacters(data){
     for (let i = 0; i<data.length; i++ ){
